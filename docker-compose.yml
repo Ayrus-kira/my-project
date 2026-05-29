@@ -1,0 +1,16 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+
+  backend:
+    build: ./backend
+    container_name: diwalihub-backend
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build: ./frontend
+    container_name: diwalihub-frontend
+    ports:
+      - "3000:80"
